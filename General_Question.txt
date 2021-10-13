@@ -1,0 +1,60 @@
+
+
+1. Write a brief summary about I2C protocol.
+
+* I2C stands for inter integerated circuit in addition it has another name IIC.
+* It was discovered by philips and it is a bus based communication.
+* We can handle the real time application and dump the time with another device also for time based application(using DS-1307 module).
+* It is serial and syncchronous communication.
+* It has four types of modes,
+       a. slave - slave only operation(default)
+       b. master - master only operation
+       c. multi-master - supports more than one master on the bus
+       d. multi-master-salve - simultaneously slave and multi-master operation
+
+* when you give power to master, slave remains low.
+* when you give power to slave , master remains high.
+* message format 
+   
+   // Start bit(start condition)
+   ->// Address frame (7 or 10 bit)
+   ->// Read or Write bit
+   ->// ACK/NACK bit (Acknowledgement bit)  
+   ->// Data Frame-1 (8 bit)
+   ->// ACK/NACK bit (Acknowledgement bit)  
+   ->// Data Frame-2 (8 bit)
+   ->// ACK/NACK bit (Acknowledgement bit)
+   ->// Stop bit
+
+* Start bit will high when SCL befor low.
+* SDA goes high after SCL high.
+* ACK- Acknowledgement.
+* NACK - Not Acknowledgement.
+* It will read based on MSB to LSB.
+*Arbitration - It will occur only more than one master is communicated.
+*Clock Stretching - It allows an I2C slave device to force the master device into wait state. A slave may perform clock stretching when it needs more time to manage data.
+
+
+2. Write short text about, pull up resistor, pull down resistor, open drain, active low, active high.
+
+* Pull up & Pull down resistor both are used to ensure the known state for signal and it is well defined even when the switch is open.
+
+* Open Drain - It behaves like a switch that is either connected to ground or disconnected. Instead of outputting a signal of a specific voltage or current, the output signal is applied to the base of an internal transistor whose collector is externalized (open) on a pin of the IC. The emitter of the transistor is connected internally to the ground pin. If the output device is a transistor then output is called open drain.
+
+* Active low - the signal of input is active low because the signal out works only when the input logic level is low.
+* Active high - the signal of input is active high because the output signal works only when the input logic is high.
+
+ 
+3. Short text about Linux booting process and the role of Kernel.
+
+* Linux booting process is the multi-stage initialization process performed during booting a Linux installation.
+* Kernel has complete control over everything in the system. The kernel performs its tasks, such as running processes, managing hardware devices such as the hard disk, and handling interrupts, in this protected kernel space.
+
+
+4. Text about first impression on Zephyr RTOS.
+
+* Safe and security with latest security updates.
+* Compatable with new hardware.
+* Shorten the development.
+* So this is more closer to an Embedded Linux type of OS
+
