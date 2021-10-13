@@ -32,7 +32,7 @@ while read -r line;
 do
 	myArray[$index]=$line
         index=$(expr $index + 1)
-done < $file_name
+done < "$file_name"
 
 
 
