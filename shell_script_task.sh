@@ -24,7 +24,7 @@ index=0
 
 #taking the entered file  path or name to be store in variable
 
-read  -p "Enter the file path :" file_name
+read  -p "Enter the file name : " file_name
 
 #functioning every line to be stored sequentially in array
 
