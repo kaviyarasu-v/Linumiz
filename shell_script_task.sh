@@ -23,8 +23,8 @@ declare -a myArray
 index=0
 
 #taking the entered file  path or name to be store in variable
-echo "Enter the file path"
-read $file_name
+
+read  -p "Enter the file path :" file_name
 
 #functioning every line to be stored sequentially in array
 
@@ -32,7 +32,7 @@ while read -r line;
 do
 	myArray[$index]=$line
         index=$(expr $index + 1)
-done < "$file_name"
+done <"$file_name"
 
 
 
